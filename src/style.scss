@@ -1,0 +1,190 @@
+// utils class
+$alignment: center, left, right, justify;
+
+$primary-color: #0C134F;
+$secondary-color: #1D267D;
+$grey: #ccc;
+$base-color: #fff;
+
+@each $align in $alignment {
+    .text {
+        &-#{$align} {
+            text-align: #{$align};
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    // padding
+    .padding-#{$i * 10} {
+        padding: $i * 10px;
+    }
+    .padding-bottom-#{$i * 10} {
+        padding-bottom: $i * 10px;
+    }
+    .padding-top-#{$i * 10} {
+        padding-top: $i * 10px;
+    }
+    .padding-left-#{$i * 10} {
+        padding-left: $i * 10px;
+    }
+    .padding-right-#{$i * 10} {
+        padding-right: $i * 10px;
+    }
+
+    // margin
+    .margin-#{$i * 10} {
+        margin: $i * 10px;
+    }
+    .margin-bottom-#{$i * 10} {
+        margin-bottom: $i * 10px;
+    }
+    .margin-top-#{$i * 10} {
+        margin-top: $i * 10px;
+    }
+    .margin-left-#{$i * 10} {
+        margin-left: $i * 10px;
+    }
+    .margin-right-#{$i * 10} {
+        margin-right: $i * 10px;
+    }
+}
+
+// general
+body {
+    color: black;
+    font-size: 16px;
+    line-height: normal;
+    font-family: 'Kanit', sans-serif;
+    background: lighten($grey, 45%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg-primary {
+    background-color: $primary-color;
+    color: $base-color;
+}
+
+ul {
+    &.no-style {
+        list-style: none;
+    }
+}
+
+// header
+header {
+    h1 {
+        span {
+            padding-left: .75rem;
+            color: $grey;
+            font-size: 1rem;
+        }
+    }
+}
+
+// main
+main {
+    .box {
+        background: white;
+        padding: 2rem;
+        box-shadow: 0 0 5px 1px rgba(black, .1);
+
+        .formula-box {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -1rem;
+            margin-right: -1rem;
+
+            > div {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0 1rem;
+                @media (min-width: 992px) {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+
+            .bordered {
+                border: 1px solid $primary-color;
+            }
+
+            form {
+                input {
+                    &[type=text] {
+                        width: 100%;
+                        height: 40px;
+                        border: 0;
+                        padding: 0 10px;
+                        background: lighten($grey, 15%);
+                    }
+
+                    &[type=submit] {
+                        cursor: pointer;
+                        height: 40px;
+                        padding: 0 1rem;
+                        background: $secondary-color;
+                        color: white;
+                        border: 0;
+                        transition: .3s;
+                        &:hover {
+                            background: lighten($secondary-color, 10%);
+                        }
+                    }
+                }
+                
+                button {
+                    cursor: pointer;
+                    background: orange;
+                    color: white;
+                    padding: 0 1rem;
+                    height: 30px;
+                    border: 0;
+                    transition: .3s;
+                    &:hover {
+                        background: lighten(orange, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-tabs {
+        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .nav-item {
+            padding: 0 .5rem;
+            a {
+                display: inline-block;
+                padding: 0 1.5rem;
+                line-height: 35px;
+                background: $grey;
+                text-decoration: none;
+                width: 125px;
+                text-align: center;
+                color: $secondary-color;
+            }
+            &.active {
+                a {
+                    color: white;
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+// footer

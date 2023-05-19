@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik - Kalkulator Matematik</title>
+    <link rel="stylesheet" href="/dist/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;1,200;1,300&   display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="padding-20 bg-primary">
+                <h1 class="text-center">Kaltik<span>Kalkulator Matematik</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="padding-top-20 padding-bottom-20">
+        <div class="container">
+            <div class="box">
+                <section id="welcome">
+                    <div class="text-center">
+                        <h1 class="margin-bottom-10">welcome to katik</h1>
+                        <p>Hi sobat selamat datang di Katik :|</p>
+                        <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai dan keliling bangun datar</p>
+                    </div>
+                </section>
+                <section id="tabs">
+                    <ul class="nav-tabs no-style">
+                        <li class="nav-item active">
+                            <a href="javascript:void()">Persegi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void()">P. Panjang</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane">
+                            <div class="formula-box">
+                                <div id="luas">
+                                    <div class="bordered">
+                                        <div class="title bg-primary padding-20">
+                                            <h3 class="text-center">Luas Persegi</h3>
+                                        </div>
+                                        <div class="padding-left-20 padding-right-20 padding-bottom-20">
+                                            <div class="image-ref text-center padding-top-10 padding-bottom-10">
+                                                <img src="img/persegi.jpg" alt="persegi">
+                                            </div>
+                                            <div class="desc">
+                                                <p>rumus luas persegi yaitu:</p>
+                                                <p class="text-center padding-top-10 padding-bottom-10"><strong>L = S x S</strong></p>
+                                                <p>dimana:</p>
+                                                <p>L = Luas</p>
+                                                <p>S = Sisi</p>
+                                            </div>
+                                            <hr class="margin-bottom-20 margin-top-20">
+                                            <div class="calc-field text-center">
+                                                <h2 class="margin-bottom-10">Hitung Luas Persegi</h2>
+                                                <form action="">
+                                                    <input class="margin-bottom-10" type="text" name="" id="" placeholder="Nilai Sisi">
+                                                    <input type="submit" value="Hitung">
+                                                    <div class="reset-block margin-top-30 text-right">
+                                                        <button type="reset">Reset</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="keliling">
+                                    <div class="bordered">
+                                        <div class="title bg-primary padding-20">
+                                            <h3 class="text-center">Keliling Persegi</h3>
+                                        </div>
+                                        <div class="padding-left-20 padding-right-20 padding-bottom-20">
+                                            <div class="image-ref text-center padding-top-10 padding-bottom-10">
+                                                <img src="img/persegi.jpg" alt="persegi">
+                                            </div>
+                                            <div class="desc">
+                                                <p>rumus Keliling persegi yaitu:</p>
+                                                <p class="text-center padding-top-10 padding-bottom-10"><strong>K = 4 x S</strong></p>
+                                                <p>dimana:</p>
+                                                <p>K = Keliling</p>
+                                                <p>S = Sisi</p>
+                                            </div>
+                                            <hr class="margin-bottom-20 margin-top-20">
+                                            <div class="calc-field text-center">
+                                                <h2 class="margin-bottom-10">Hitung Keliling Persegi</h2>
+                                                <form action="">
+                                                    <input class="margin-bottom-10" type="text" name="" id="" placeholder="Nilai Sisi">
+                                                    <input type="submit" value="Hitung">
+                                                    <div class="reset-block margin-top-30 text-right">
+                                                        <button type="reset">Reset</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container bg-primary">
+            <p class="text-center padding-bottom-10 padding-top-10">&#169; <span id="year"></span> Revou fundamental course</p>
+        </div>
+    </footer>
+
+    <script src="dist/script.prod.js"></script>
+</body>
+</html>

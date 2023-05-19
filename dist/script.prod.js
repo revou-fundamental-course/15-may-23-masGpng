@@ -1,0 +1,1 @@
+"use strict";var navItem=document.querySelector(".nav-item a");navItem.addEventListener("click",function(t){console.log(t.target.closest(".nav-item").classList.contains("active"))});
