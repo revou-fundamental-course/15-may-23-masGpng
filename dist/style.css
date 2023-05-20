@@ -281,7 +281,7 @@ main .box .formula-box form input[type=text] {
   padding: 0 10px;
   background: #f2f2f2;
 }
-main .box .formula-box form input[type=submit] {
+main .box .formula-box form input[type=button] {
   cursor: pointer;
   height: 40px;
   padding: 0 1rem;
@@ -290,8 +290,14 @@ main .box .formula-box form input[type=submit] {
   border: 0;
   transition: 0.3s;
 }
-main .box .formula-box form input[type=submit]:hover {
+main .box .formula-box form input[type=button]:hover {
   background: #2733a6;
+}
+main .box .formula-box form .output {
+  margin-bottom: 1rem;
+}
+main .box .formula-box form .output:empty {
+  margin: 0;
 }
 main .box .formula-box form button {
   cursor: pointer;
@@ -327,4 +333,10 @@ main .nav-tabs .nav-item a {
 main .nav-tabs .nav-item.active a {
   color: white;
   background: #0C134F;
+}
+main .tab-content .tab-pane {
+  display: none;
+}
+main .tab-content .tab-pane.active {
+  display: block;
 }

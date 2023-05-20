@@ -130,7 +130,7 @@ main {
                         background: lighten($grey, 15%);
                     }
 
-                    &[type=submit] {
+                    &[type=button] {
                         cursor: pointer;
                         height: 40px;
                         padding: 0 1rem;
@@ -141,6 +141,13 @@ main {
                         &:hover {
                             background: lighten($secondary-color, 10%);
                         }
+                    }
+                }
+
+                .output {
+                    margin-bottom: 1rem;
+                    &:empty {
+                        margin: 0;
                     }
                 }
                 
@@ -182,6 +189,15 @@ main {
                     color: white;
                     background: $primary-color;
                 }
+            }
+        }
+    }
+
+    .tab-content {
+        .tab-pane {
+            display: none;
+            &.active {
+                display: block;
             }
         }
     }

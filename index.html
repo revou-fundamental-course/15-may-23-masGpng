@@ -31,11 +31,11 @@
                 </section>
                 <section id="tabs">
                     <ul class="nav-tabs no-style">
-                        <li class="nav-item active">
-                            <a href="javascript:void()">Persegi</a>
-                        </li>
                         <li class="nav-item">
-                            <a href="javascript:void()">P. Panjang</a>
+                            <a href="javascript:void(0)">Persegi</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="javascript:void(0)">P. Panjang</a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -61,10 +61,11 @@
                                             <div class="calc-field text-center">
                                                 <h2 class="margin-bottom-10">Hitung Luas Persegi</h2>
                                                 <form action="">
-                                                    <input class="margin-bottom-10" type="text" name="" id="" placeholder="Nilai Sisi">
-                                                    <input type="submit" value="Hitung">
+                                                    <input class="margin-bottom-10" type="text" name="" id="sisi" placeholder="Nilai Sisi" onchange="luasPersegi(this)">
+                                                    <div id="output_luas" class="output text-left"></div>
+                                                    <input type="button" value="Hitung" onclick="hitungLuasPersegi(this)">
                                                     <div class="reset-block margin-top-30 text-right">
-                                                        <button type="reset">Reset</button>
+                                                        <button type="reset" onclick="resetAll(this)(this)">Reset</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -91,10 +92,83 @@
                                             <div class="calc-field text-center">
                                                 <h2 class="margin-bottom-10">Hitung Keliling Persegi</h2>
                                                 <form action="">
-                                                    <input class="margin-bottom-10" type="text" name="" id="" placeholder="Nilai Sisi">
-                                                    <input type="submit" value="Hitung">
+                                                    <input class="margin-bottom-10" type="text" name="" id="sisi" placeholder="Nilai Sisi" onchange="kelilingPersegi(this)">
+                                                    <div id="output_keliling" class="output text-left"></div>
+                                                    <input type="button" value="Hitung" onclick="hitungKelilingPersegi(this)">
                                                     <div class="reset-block margin-top-30 text-right">
-                                                        <button type="reset">Reset</button>
+                                                        <button type="reset" onclick="resetAll(this)(this)">Reset</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- persegi panjang -->
+                        <div class="tab-pane active">
+                            <div class="formula-box">
+                                <div id="luas">
+                                    <div class="bordered">
+                                        <div class="title bg-primary padding-20">
+                                            <h3 class="text-center">Luas Persegi Panjang</h3>
+                                        </div>
+                                        <div class="padding-left-20 padding-right-20 padding-bottom-20">
+                                            <div class="image-ref text-center padding-top-10 padding-bottom-10">
+                                                <img src="img/persegi-panjang.jpg" alt="persegi Panjang">
+                                            </div>
+                                            <div class="desc">
+                                                <p>rumus luas persegi Panjang yaitu:</p>
+                                                <p class="text-center padding-top-10 padding-bottom-10"><strong>L = P x l</strong></p>
+                                                <p>dimana:</p>
+                                                <p>L = Luas</p>
+                                                <p>P = Panjang</p>
+                                                <p>l = lebar</p>
+                                            </div>
+                                            <hr class="margin-bottom-20 margin-top-20">
+                                            <div class="calc-field text-center">
+                                                <h2 class="margin-bottom-10">Hitung Luas Persegi Panjang</h2>
+                                                <form action="" id="luasPersegiPanjang">
+                                                    <input class="margin-bottom-10" type="text" name="panjang" id="" placeholder="Nilai Panjang" onchange="luasPersegiPanjang()">
+                                                    <input class="margin-bottom-10" type="text" name="lebar" id="" placeholder="Nilai Lebar" onchange="luasPersegiPanjang()">
+                                                    <div id="output_keliling" class="output text-left"></div>
+                                                    <input type="button" value="Hitung" onclick="hitungLuasPersegiPanjang(this)">
+                                                    <div class="reset-block margin-top-30 text-right">
+                                                        <button type="reset" onclick="resetAll(this)">Reset</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="keliling">
+                                    <div class="bordered">
+                                        <div class="title bg-primary padding-20">
+                                            <h3 class="text-center">Keliling Persegi Panjang</h3>
+                                        </div>
+                                        <div class="padding-left-20 padding-right-20 padding-bottom-20">
+                                            <div class="image-ref text-center padding-top-10 padding-bottom-10">
+                                                <img src="img/persegi-panjang.jpg" alt="persegi Panjang">
+                                            </div>
+                                            <div class="desc">
+                                                <p>rumus Keliling persegi Panjang yaitu:</p>
+                                                <p class="text-center padding-top-10 padding-bottom-10"><strong>K = 2 x (p + l)</strong></p>
+                                                <p>dimana:</p>
+                                                <p>K = Keliling</p>
+                                                <p>P = Panjang</p>
+                                                <p>l = lebar</p>
+                                            </div>
+                                            <hr class="margin-bottom-20 margin-top-20">
+                                            <div class="calc-field text-center">
+                                                <h2 class="margin-bottom-10">Hitung Keliling Persegi Panjang</h2>
+                                                <form action="" id="kelilingPersegiPanjang">
+                                                    <input class="margin-bottom-10" type="text" name="panjang" id="" placeholder="Nilai Panjang" onchange="kelilingPersegiPanjang()">
+                                                    <input class="margin-bottom-10" type="text" name="lebar" id="" placeholder="Nilai Lebar" onchange="kelilingPersegiPanjang()">
+                                                    <div id="output_keliling" class="output text-left"></div>
+                                                    <input type="button" value="Hitung" onclick="hitungKelilingPersegiPanjang(this)">
+                                                    <div class="reset-block margin-top-30 text-right">
+                                                        <button type="reset" onclick="resetAll(this)">Reset</button>
                                                     </div>
                                                 </form>
                                             </div>
